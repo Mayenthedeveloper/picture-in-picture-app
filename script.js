@@ -1,7 +1,7 @@
 const videoElement = document.getElementById("video");
 const button = document.getElementById("button");
 
-// Promt user to select meedia stream, pass to  video ele and play
+// Promt user to select meedia stream, pass to  video element and play
 async function selectMediaStream() {
   try {
     const mediaStream = await navigator.mediaDevices.getDisplayMedia();
@@ -16,7 +16,7 @@ async function selectMediaStream() {
 }
 
 button.addEventListener("click", async () => {
-  //disable button when
+  //disable button
   button.diabled = true;
   //start picture in picture
   await videoElement.requestPictureInPicture();
